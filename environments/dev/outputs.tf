@@ -8,3 +8,7 @@ output "public_subnet_id" {
 output "private_subnet_id" {
   value = module.private_subnet.subnet_id
 }
+
+output "internet_gateway" {
+  value = module.internet_gateway.igw_id
+}

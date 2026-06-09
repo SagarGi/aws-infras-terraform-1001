@@ -35,3 +35,10 @@ module "private_subnet" {
   subnet_name       = "private-subnet"
   public_subnet     = false
 }
+
+// create an internetgateway for the access of the subnets to the internet
+module "internet_gateway" {
+  source = "../../modules/internet-gateway"
+
+  vpc_id = module.vpc.vpc_id
+}
