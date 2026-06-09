@@ -21,3 +21,6 @@ variable "ami_id" {
 variable "instance_type" {
   type = string
 }
+variable "ssh_allowed_cidrs" {
+  type = list(string)
+}

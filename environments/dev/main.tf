@@ -61,6 +61,7 @@ module "web_sg" {
   vpc_id = module.vpc.vpc_id
 
   security_group_name = "web-sg"
+  ssh_allowed_cidrs   = var.ssh_allowed_cidrs
 }
 
 // create public ec2 instance

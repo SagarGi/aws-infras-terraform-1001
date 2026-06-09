@@ -2,3 +2,6 @@ vpc_cidr = "<your-vpc-cidr>"
 public_subnet_cidr  = "<public-subnet-cidr>"
 private_subnet_cidr = "<private-subnet-cidr>"
 availability_zone   = "<availability-zone>"
+ami_id              = "<your-aws-ami-id>"
+instance_type       = "<instance_type>"
+ssh_allowed_cidrs = ["<your-ip>/32"]
