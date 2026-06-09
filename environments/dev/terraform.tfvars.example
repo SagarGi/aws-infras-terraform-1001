@@ -1,1 +1,4 @@
 vpc_cidr = "<your-vpc-cidr>"
+public_subnet_cidr  = "<public-subnet-cidr>"
+private_subnet_cidr = "<private-subnet-cidr>"
+availability_zone   = "<availability-zone>"
