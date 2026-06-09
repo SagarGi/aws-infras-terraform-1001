@@ -42,3 +42,14 @@ module "internet_gateway" {
 
   vpc_id = module.vpc.vpc_id
 }
+
+// Create a route table for public subnet to access internet through IGW
+module "public_route_table" {
+  source = "../../modules/route-table"
+
+  vpc_id              = module.vpc.vpc_id
+  subnet_id           = module.public_subnet.subnet_id
+  internet_gateway_id = module.internet_gateway.igw_id
+
+  route_table_name = "public-route-table"
+}
