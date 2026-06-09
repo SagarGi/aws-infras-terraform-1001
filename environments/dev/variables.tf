@@ -13,3 +13,11 @@ variable "private_subnet_cidr" {
 variable "availability_zone" {
   type = string
 }
+
+variable "ami_id" {
+  type = string
+}
+
+variable "instance_type" {
+  type = string
+}

@@ -62,3 +62,17 @@ module "web_sg" {
 
   security_group_name = "web-sg"
 }
+
+// create ec2 instance
+module "public_ec2" {
+  source = "../../modules/ec2"
+
+  ami_id        = var.ami_id
+  instance_type = var.instance_type
+
+  subnet_id = module.public_subnet.subnet_id
+
+  security_group_id = module.web_sg.security_group_id
+
+  instance_name = "public-ec2"
+}
