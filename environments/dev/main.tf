@@ -53,3 +53,12 @@ module "public_route_table" {
 
   route_table_name = "public-route-table"
 }
+
+// create a security groups for in and outbound rules
+module "web_sg" {
+  source = "../../modules/security-group"
+
+  vpc_id = module.vpc.vpc_id
+
+  security_group_name = "web-sg"
+}
